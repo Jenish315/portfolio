@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Jenish's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body class="light-mode">
+    <!-- Header -->
+    <header id="home">
+        <nav>
+            <div class="left">Jenish's Portfolio</div>
+            <div class="right">
+                <div id="menu-toggle" class="menu-toggle" onclick="toggleMenu()">
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+                <ul id="sidemenu" class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#project">Projects</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                    <li><button id="theme-toggle">🌙</button></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <script src="scripts.js"></script>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="firstsection">
+            <div class="leftsection">
+                <div>Welcome to My Portfolio</div>
+                <div>My Name is <span class="white">Jenish</span></div>
+                <div>and I am exploring</div>
+                <span id="element"></span>
+                <div class="button">
+                    <a href="path/to/resume.pdf" target="_blank"><button class="btn download-resume">Download Resume</button></a>
+                    <a href="https://github.com/Jenish315" target="_blank"><button class="btn">GitHub</button></a>
+                </div>
+            </div>
+            <div class="rightsection">
+                <img src="gitimg-unscreen.gif" alt="Portfolio Image">
+            </div>
+        </section>
+    </main>
+
+    <!-- About Section -->
+    <div class="container" id="about">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="w9sw_c0bt_230517-removebg-preview.png" alt="About Image">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hey there!</p>
+                <p>My name is Jenish Kanani. I completed my diploma at Government Polytechnic Gandhinagar. Currently, I am pursuing my BE at Vishwakarma Government Engineering College.</p>
+                <p>I am passionate about exploring new things, believe in continuous learning, and strive for personal and professional growth. I am always eager to take on new challenges and expand my horizons.</p>
+                <p>In my free time, I enjoy:</p>
+                <ul>
+                    <li>Reading about the latest trends in technology</li>
+                    <li>Experimenting with new programming languages and frameworks</li>
+                    <li>Participating in hackathons and coding competitions</li>
+                </ul>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab(event, 'skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab(event, 'education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Web Development</span><br>Web Development using MERN</li>
+                        <li><span>App Development</span><br>Building Android apps</li>
+                        <li><span>Database Management</span><br>Proficient in SQL and NoSQL databases</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Diploma in Engineering</span><br>Government Polytechnic Gandhinagar</li>
+                        <li><span>Bachelor in Engineering</span><br>Vishwakarma Government Engineering College</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div id="project">
+        <div class="container">
+            <h1 class="sub-title">Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="Free Vector _ Developer activity concept illustration.jpeg" alt="First PHP Website">
+                    <div class="layer">
+                        <h3>First PHP Website</h3>
+                        <p>Created during my diploma, this project covers basic to advanced PHP concepts, including server setup, form handling, and user authentication.</p>
+                        <a href="https://github.com/Jenish315/diploma_project"><i class="fas fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Front End JavaScript Development Handbook – React, Angular, and Vue Compared.jpeg" alt="Scholarship Guide">
+                    <div class="layer">
+                        <h3>Scholarship Guide</h3>
+                        <p>A hackathon project to assist students in acquiring scholarships, utilizing HTML, CSS, MongoDB, Bootstrap, and Node.js.</p>
+                        <a href="https://github.com/Jenish315/scholarship-guide"><i class="fas fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Free Vector _ Hand drawn illustration of people with smartphone for marketing.jpeg" alt="WhatsApp Clone">
+                    <div class="layer">
+                        <h3>WhatsApp Clone</h3>
+                        <p>Developed an Android WhatsApp Clone with data fetching, authentication, live data display, and real-time chat using Firebase.</p>
+                        <a href="https://github.com/Jenish315/WhatsApp-Clone"><i class="fas fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div id="services">
+        <h1 class="sub-title">Services</h1>
+        <div class="services-list">
+            <div>
+                <h2>Web Design</h2>
+                <p>I offer modern, responsive, and user-friendly web design services. I specialize in creating aesthetically pleasing and highly functional websites that provide a seamless user experience.</p>
+            </div>
+            <div>
+                <h2>App Development</h2>
+                <p>Offering robust and scalable app development services for both Android and iOS platforms. I create intuitive and high-performing apps tailored to your business needs.</p>
+            </div>
+            <div>
+                <h2>UI/UX</h2>
+                <p>Creating intuitive and visually appealing user interfaces and experiences that enhance user satisfaction and drive engagement. I focus on user-centered design principles to ensure the best possible user experience.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Enter message here"></textarea>
+                        <button type="submit" class="btn"><i class="far fa-paper-plane"></i> Submit</button>
+                    </form>
+                    <p id="form-status"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h1>Thank You For Visiting</h1>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#project">Projects</a>
+                    <a href="#services">Services</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/jenish-kanani-7ab271268" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:jenishkanani93@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Jenish Kanani. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        // Initialize Typed.js
+        var typed = new Typed('#element', {
+            strings: ['Web Development.', 'App Development.', 'Machine Learning.'],
+            typeSpeed: 50,
+            loop: true
+        });
+
+        // Theme Toggle Script
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+        }
+
+        // Get the user's theme preference from localStorage
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            setTheme(savedTheme);
+        } else {
+            // Detect system preference
+            const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+            setTheme(prefersDarkScheme ? 'dark' : 'light');
+        }
+
+        // Toggle theme functionality
+        const themeToggleButton = document.getElementById('theme-toggle');
+
+        themeToggleButton.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            setTheme(newTheme);
+        });
+
+        // Contact Form Submission Script
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxPCQzvOeuskJJ8Qkx3gm-lFm0sUgRJQfHDPFlFNrWwCxCxRfc-ao-D1Xo9iz4a2NViQg/exec';
+        const form = document.forms['submit-to-google-sheet'];
+        const formStatus = document.getElementById('form-status');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    formStatus.textContent = 'Success! Your message has been sent.';
+                    formStatus.style.color = 'green';
+                    form.reset();
+                })
+                .catch(error => {
+                    formStatus.textContent = 'Error! Please try again.';
+                    formStatus.style.color = 'red';
+                });
+        });
+    </script>
+    <script>
+        // Tab Functionality Script
+        function opentab(evt, tabName) {
+            // Get all elements with class="tab-contents" and hide them
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            for (var i = 0; i < tabcontents.length; i++) {
+                tabcontents[i].style.display = "none";
+            }
+    
+            // Get all elements with class="tab-links" and remove the class "active-link"
+            var tablinks = document.getElementsByClassName("tab-links");
+            for (var i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active-link", "");
+            }
+    
+            // Show the current tab, and add an "active-link" class to the button that opened the tab
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active-link";
+        }
+    
+        // Display the first tab by default
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelector(".tab-links").click();
+        });
+    
+        // Handle "Download Resume" button click
+        document.querySelector('.btn.download-resume').addEventListener('click', function(event) {
+        event.preventDefault();
+        window.location.href = '#contact';
+        document.getElementById('form-status').textContent = 'Contact me for my resume.';
+        document.getElementById('form-status').style.color = 'blue';
+        setTimeout(() => {
+            formStatus.textContent = '';
+        }, 5000);
+    });
+    </script>
+    
+</body>
+</html>
