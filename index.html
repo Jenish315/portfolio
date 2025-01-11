@@ -1,277 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Jenish's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-</head>
-<body class="light-mode">
-    <!-- Header -->
-    <header id="home">
-        <nav>
-            <div class="left">Jenish's Portfolio</div>
-            <div class="right">
-                <div id="menu-toggle" class="menu-toggle" onclick="toggleMenu()">
-                    <i class="fas fa-ellipsis-v"></i>
-                </div>
-                <ul id="sidemenu" class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#project">Projects</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact Me</a></li>
-                    <li><button id="theme-toggle">🌙</button></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <script src="scripts.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Main Content -->
-    <main class="main-content">
-        <section class="firstsection">
-            <div class="leftsection">
-                <div>Welcome to My Portfolio</div>
-                <div>My Name is <span class="white">Jenish</span></div>
-                <div>and I am exploring</div>
-                <span id="element"></span>
-                <div class="button">
-                    <a href="path/to/resume.pdf" target="_blank"><button class="btn download-resume">Download Resume</button></a>
-                    <a href="https://github.com/Jenish315" target="_blank"><button class="btn">GitHub</button></a>
-                </div>
-            </div>
-            <div class="rightsection">
-                <img src="gitimg-unscreen.gif" alt="Portfolio Image">
-            </div>
-        </section>
-    </main>
+        <link rel="stylesheet" href="assets/css/styles.css">
 
-    <!-- About Section -->
-    <div class="container" id="about">
-        <div class="row">
-            <div class="about-col-1">
-                <img src="w9sw_c0bt_230517-removebg-preview.png" alt="About Image">
-            </div>
-            <div class="about-col-2">
-                <h1 class="sub-title">About Me</h1>
-                <p>Hey there!</p>
-                <p>My name is Jenish Kanani. I completed my diploma at Government Polytechnic Gandhinagar. Currently, I am pursuing my BE at Vishwakarma Government Engineering College.</p>
-                <p>I am passionate about exploring new things, believe in continuous learning, and strive for personal and professional growth. I am always eager to take on new challenges and expand my horizons.</p>
-                <p>In my free time, I enjoy:</p>
-                <ul>
-                    <li>Reading about the latest trends in technology</li>
-                    <li>Experimenting with new programming languages and frameworks</li>
-                    <li>Participating in hackathons and coding competitions</li>
-                </ul>
-                <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab(event, 'skills')">Skills</p>
-                    <p class="tab-links" onclick="opentab(event, 'education')">Education</p>
+        <!-- =====BOX ICONS===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <title>Portfolio website</title>
+    </head>
+    <body>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <!-- Logo Image -->
+                    <a href="#" class="nav__logo">
+                        <img src="assets/img/je-modified.png" alt="Jenish Logo" class="logo-img">
+                    </a>
                 </div>
-                <div class="tab-contents active-tab" id="skills">
-                    <ul>
-                        <li><span>Web Development</span><br>Web Development using MERN</li>
-                        <li><span>App Development</span><br>Building Android apps</li>
-                        <li><span>Database Management</span><br>Proficient in SQL and NoSQL databases</li>
+        
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                     </ul>
                 </div>
-                <div class="tab-contents" id="education">
-                    <ul>
-                        <li><span>Diploma in Engineering</span><br>Government Polytechnic Gandhinagar</li>
-                        <li><span>Bachelor in Engineering</span><br>Vishwakarma Government Engineering College</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Projects Section -->
-    <div id="project">
-        <div class="container">
-            <h1 class="sub-title">Projects</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="Free Vector _ Developer activity concept illustration.jpeg" alt="First PHP Website">
-                    <div class="layer">
-                        <h3>First PHP Website</h3>
-                        <p>Created during my diploma, this project covers basic to advanced PHP concepts, including server setup, form handling, and user authentication.</p>
-                        <a href="https://github.com/Jenish315/diploma_project"><i class="fas fa-link"></i></a>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home bd-grid" id="home">
+                <div class="home__data">
+                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Jenish</span><br> Web Developer</h1>
+
+                    <a href="#contact" class="button">Contact</a>
+                </div>
+
+                <div class="home__social">
+                    <a href="in/jenish-kanani-7ab271268" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/Jenish315" class="home__social-icon"><i class='bx bxl-github' ></i></a>
+                </div>
+
+                <div class="home__img">
+                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <mask id="mask0" mask-type="alpha">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                        </mask>
+                        <g mask="url(#mask0)">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                            <image class="home__blob-img" x="50" y="60" href="assets/img/aboutimg-removebg-preview-photoaidcom-cropped.png"/>
+                        </g>
+                    </svg>
+                </div>
+            </section>
+
+            <!--===== ABOUT =====-->
+            <section class="about section " id="about">
+                <h2 class="section-title">About</h2>
+
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="assets/img/aboutimg.jpg" alt="">
+                    </div>
+                    
+                    <div>
+                        <h2 class="about__subtitle">I'am Jenish</h2>
+                        <p class="about__text"> a passionate web developer currently pursuing a Bachelor of Engineering at Vishwakarma Government Engineering College. My expertise focuses on mastering modern technologies like MongoDB, Node.js, and React.js to craft dynamic, efficient, and user-friendly web applications.
+                            With a strong commitment to continuous learning and innovation, I am eager to contribute to cutting-edge projects that challenge my skills and help me grow as a full-stack developer.</p>           
+                    </div>                                   
+                </div>
+            </section>
+
+            <!--===== SKILLS =====-->
+            <section class="skills section" id="skills">
+                <h2 class="section-title">Skills</h2>
+
+                <div class="skills__container bd-grid">          
+                    <div>
+                        <h2 class="skills__subtitle">Profesional Skills</h2>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-html5 skills__icon'></i>
+                                <span class="skills__name">HTML5</span>
+                            </div>
+                            <div class="skills__bar skills__html">
+
+                            </div>
+                            <div>
+                                <span class="skills__percentage">95%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-css3 skills__icon'></i>
+                                <span class="skills__name">CSS3</span>
+                            </div>
+                            <div class="skills__bar skills__css">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">85%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-javascript skills__icon' ></i>
+                                <span class="skills__name">JAVASCRIPT</span>
+                            </div>
+                            <div class="skills__bar skills__js">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">65%</span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div>              
+                        <img src="assets/img/work3.jpg" alt="" class="skills__img">
                     </div>
                 </div>
-                <div class="work">
-                    <img src="Front End JavaScript Development Handbook – React, Angular, and Vue Compared.jpeg" alt="Scholarship Guide">
-                    <div class="layer">
-                        <h3>Scholarship Guide</h3>
-                        <p>A hackathon project to assist students in acquiring scholarships, utilizing HTML, CSS, MongoDB, Bootstrap, and Node.js.</p>
-                        <a href="https://github.com/Jenish315/scholarship-guide"><i class="fas fa-link"></i></a>
+            </section>
+            <section class="work section" id="work">
+                <h2 class="section-title">Projects</h2>
+            
+                <div class="work__container bd-grid">
+                    <!-- WanderNest Project -->
+                    <div class="work__card">
+                        <h3 class="work__title">WanderNest</h3>
+                        <p class="work__description">
+                            WanderNest is a platform connecting travelers with accommodations. Built with modern web technologies including HTML, CSS, JavaScript, Node.js, Express.js, Passport.js, MongoDB Atlas, Cloudinary, and EJS.
+                        </p>
+                        <a href="https://github.com/Jenish315/WanderNest" target="_blank" class="work__button">View Project</a>
+                    </div>
+            
+                    <!-- JSecure System Project -->
+                    <div class="work__card">
+                        <h3 class="work__title">JSecure System</h3>
+                        <p class="work__description">
+                            A web-based application demonstrating foundational to advanced concepts of PHP, focusing on server-side interactions and dynamic content updates.
+                        </p>
+                        <a href="https://github.com/Jenish315/diploma_project" target="_blank" class="work__button">View Project</a>
+                    </div>
+            
+                    <!-- Netflix Clone Project -->
+                    <div class="work__card">
+                        <h3 class="work__title">Netflix Clone</h3>
+                        <p class="work__description">
+                            A responsive front-end project designed to replicate Netflix's interface using HTML, CSS, and JavaScript.
+                        </p>
+                        <a href="#" target="_blank" class="work__button">View Project</a>
+                    </div>
+            
+                    <!-- Scholarship Guide Project -->
+                    <div class="work__card">
+                        <h3 class="work__title">Scholarship Guide</h3>
+                        <p class="work__description">
+                            A hackathon project aimed at helping students find and apply for scholarships with dynamic filtering and tracking features.
+                        </p>
+                        <a href="https://github.com/Jenish315/scholarship-guide" target="_blank" class="work__button">View Project</a>
                     </div>
                 </div>
-                <div class="work">
-                    <img src="Free Vector _ Hand drawn illustration of people with smartphone for marketing.jpeg" alt="WhatsApp Clone">
-                    <div class="layer">
-                        <h3>WhatsApp Clone</h3>
-                        <p>Developed an Android WhatsApp Clone with data fetching, authentication, live data display, and real-time chat using Firebase.</p>
-                        <a href="https://github.com/Jenish315/WhatsApp-Clone"><i class="fas fa-link"></i></a>
-                    </div>
-                </div>
-            </div>
+            </section>
+            
+
+
+
+          <!--===== CONTACT =====-->
+<section class="contact section" id="contact">
+    <h2 class="section-title">Contact</h2>
+
+    <div class="contact__container bd-grid">
+        <form id="contactForm" class="contact__form" onsubmit="handleFormSubmit(event)">
+            <input type="text" placeholder="Name" class="contact__input" id="name" required>
+            <input type="email" placeholder="Email" class="contact__input" id="email" required>
+            <textarea placeholder="Message" class="contact__input" id="message" rows="10" required></textarea>
+            <input type="submit" value="Send" class="contact__button button">
+        </form>
+        
+        <div id="successMessage" class="contact__success-message" style="display: none;">
+            <p>Your message has been sent successfully!</p>
         </div>
     </div>
+</section>
 
-    <!-- Services Section -->
-    <div id="services">
-        <h1 class="sub-title">Services</h1>
-        <div class="services-list">
-            <div>
-                <h2>Web Design</h2>
-                <p>I offer modern, responsive, and user-friendly web design services. I specialize in creating aesthetically pleasing and highly functional websites that provide a seamless user experience.</p>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer">
+            <p class="footer__title">Jenish kanani</p>
+            <div class="footer__social">
+                <a href="in/jenish-kanani-7ab271268" class="footer__icon"><i class='bx bxl-linkedin' ></i></a>
+                <a href="https://github.com/Jenish315" class="footer__icon"><i class='bx bxl-github' ></i></a>
             </div>
-            <div>
-                <h2>App Development</h2>
-                <p>Offering robust and scalable app development services for both Android and iOS platforms. I create intuitive and high-performing apps tailored to your business needs.</p>
-            </div>
-            <div>
-                <h2>UI/UX</h2>
-                <p>Creating intuitive and visually appealing user interfaces and experiences that enhance user satisfaction and drive engagement. I focus on user-centered design principles to ensure the best possible user experience.</p>
-            </div>
-        </div>
-    </div>
+            <p class="footer__copy">&#169;All rigths reserved</p>
+        </footer>
 
-    <!-- Contact Section -->
-    <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
-                </div>
-                <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Enter message here"></textarea>
-                        <button type="submit" class="btn"><i class="far fa-paper-plane"></i> Submit</button>
-                    </form>
-                    <p id="form-status"></p>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Footer -->
-    <footer id="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <h1>Thank You For Visiting</h1>
-                </div>
-                <div class="footer-links">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#project">Projects</a>
-                    <a href="#services">Services</a>
-                    <a href="#contact">Contact</a>
-                </div>
-                <div class="footer-social">
-                    <a href="https://www.linkedin.com/in/jenish-kanani-7ab271268" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="mailto:jenishkanani93@gmail.com"><i class="fas fa-envelope"></i></a>
-                </div>
-                <div class="footer-bottom">
-                    <p>&copy; 2024 Jenish Kanani. All rights reserved.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
 
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script>
-        // Initialize Typed.js
-        var typed = new Typed('#element', {
-            strings: ['Web Development.', 'App Development.', 'Machine Learning.'],
-            typeSpeed: 50,
-            loop: true
-        });
-
-        // Theme Toggle Script
-        function setTheme(theme) {
-            document.documentElement.setAttribute('data-theme', theme);
-            localStorage.setItem('theme', theme);
-        }
-
-        // Get the user's theme preference from localStorage
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme) {
-            setTheme(savedTheme);
-        } else {
-            // Detect system preference
-            const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
-            setTheme(prefersDarkScheme ? 'dark' : 'light');
-        }
-
-        // Toggle theme functionality
-        const themeToggleButton = document.getElementById('theme-toggle');
-
-        themeToggleButton.addEventListener('click', () => {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            setTheme(newTheme);
-        });
-
-        // Contact Form Submission Script
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbxPCQzvOeuskJJ8Qkx3gm-lFm0sUgRJQfHDPFlFNrWwCxCxRfc-ao-D1Xo9iz4a2NViQg/exec';
-        const form = document.forms['submit-to-google-sheet'];
-        const formStatus = document.getElementById('form-status');
-
-        form.addEventListener('submit', e => {
-            e.preventDefault();
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => {
-                    formStatus.textContent = 'Success! Your message has been sent.';
-                    formStatus.style.color = 'green';
-                    form.reset();
-                })
-                .catch(error => {
-                    formStatus.textContent = 'Error! Please try again.';
-                    formStatus.style.color = 'red';
-                });
-        });
-    </script>
-    <script>
-        // Tab Functionality Script
-        function opentab(evt, tabName) {
-            // Get all elements with class="tab-contents" and hide them
-            var tabcontents = document.getElementsByClassName("tab-contents");
-            for (var i = 0; i < tabcontents.length; i++) {
-                tabcontents[i].style.display = "none";
-            }
-    
-            // Get all elements with class="tab-links" and remove the class "active-link"
-            var tablinks = document.getElementsByClassName("tab-links");
-            for (var i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active-link", "");
-            }
-    
-            // Show the current tab, and add an "active-link" class to the button that opened the tab
-            document.getElementById(tabName).style.display = "block";
-            evt.currentTarget.className += " active-link";
-        }
-    
-        // Display the first tab by default
-        document.addEventListener("DOMContentLoaded", function () {
-            document.querySelector(".tab-links").click();
-        });
-    
-        // Handle "Download Resume" button click
-        document.querySelector('.btn.download-resume').addEventListener('click', function(event) {
-        event.preventDefault();
-        window.location.href = '#contact';
-        document.getElementById('form-status').textContent = 'Contact me for my resume.';
-        document.getElementById('form-status').style.color = 'blue';
-        setTimeout(() => {
-            formStatus.textContent = '';
-        }, 5000);
-    });
-    </script>
-    
-</body>
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+    </body>
 </html>
+<script>
+    // Handle form submission
+function handleFormSubmit(event) {
+    event.preventDefault(); // Prevent page reload on form submission
+
+    // Simulate successful form submission
+    setTimeout(() => {
+        // Show success message
+        document.getElementById('successMessage').style.display = 'block';
+        
+        // Clear the form
+        document.getElementById('contactForm').reset();
+
+        // Hide success message after a few seconds
+        setTimeout(() => {
+            document.getElementById('successMessage').style.display = 'none';
+        }, 5000); // Hide after 5 seconds
+    }, 1000); // Simulate a delay before showing success message
+}
+
+</script>
